@@ -43,3 +43,29 @@ public class SubDataTest extends TestCase {
   - a 가 참인지 확인
 - assertFalse(a)
   - a 가 거짓인지 확인
+
+## TDD 는 테스트가 실패할 경우에만 실제코드를 작성한다.
+```java
+import junit.framework.TestCase;
+
+public class SubDateTest extends TestCase {
+  public static void main(String[] args) {
+    junit.textui.TestRunner.run(SubDateTest.class);
+  }
+  public void testGetYearDay(){
+    assertEquals(0,SubDate.getYearDay(1));
+    assertEquals(365,SubDate.getYearDay(2));
+  }
+}
+```
+```java
+public class SubDate {
+  public static int getYearDay(int year) {
+    if (year==1 ) return 0;
+    else return 365;
+  }
+}
+```
+- 켄트벡(Kent Beck)은 테스트를 재빠르게 통과하기 위해서는 어떤 죄악(?)을 저질러도 상관없다고 했다.
+  - 테스트를 통과만 한다면 상관없다.
+  - TDD싸이클에 의해 결국에는 당연한 코드로 변경되기 때문이다.

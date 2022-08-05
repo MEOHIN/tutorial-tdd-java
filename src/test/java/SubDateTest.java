@@ -21,5 +21,7 @@ class SubDateTest extends TestCase {
         assertTrue(SubDate.isLeapYear(0));
         assertFalse(SubDate.isLeapYear(1));
         assertTrue(SubDate.isLeapYear(4));
+        assertTrue(SubDate.isLeapYear(1200));    // 윤년
+        assertFalse(SubDate.isLeapYear(700));    // 평년
     }
 }

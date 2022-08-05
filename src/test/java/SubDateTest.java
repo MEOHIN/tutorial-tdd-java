@@ -33,7 +33,7 @@ class SubDateTest extends TestCase {
     }
 
     public void testGetTotalDay() {
-        assertEquals(1, SubDate.getTotalDay(00010101));
-        assertEquals(366, SubDate.getTotalDay(00020101));
+        assertEquals(1, SubDate.getTotalDay("00010101"));
+        assertEquals(366, SubDate.getTotalDay("00020101"));
     }
 }

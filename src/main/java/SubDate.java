@@ -14,4 +14,9 @@ public class SubDate {
         if (year % 4 == 0) return true;
         return false;
     }
+
+    public static int getMonthDay(int month) {
+        if (month == 1) return 0;
+        else return 31;
+    }
 }

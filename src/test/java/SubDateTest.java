@@ -24,4 +24,9 @@ class SubDateTest extends TestCase {
         assertTrue(SubDate.isLeapYear(1200));    // 윤년
         assertFalse(SubDate.isLeapYear(700));    // 평년
     }
+
+    public void testGetMonthDay() {
+        assertEquals(0, SubDate.getMonthDay(1));
+        assertEquals(31, SubDate.getMonthDay(2);
+    }
 }

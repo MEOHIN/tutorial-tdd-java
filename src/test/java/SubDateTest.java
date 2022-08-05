@@ -1,8 +1,6 @@
 import junit.framework.TestCase;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-class SubDateTest extends TestCase {
+public class SubDateTest extends TestCase {
     public static void main(String[] args) {
         junit.textui.TestRunner.run(SubDateTest.class);
     }

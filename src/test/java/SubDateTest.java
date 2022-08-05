@@ -31,4 +31,9 @@ class SubDateTest extends TestCase {
         assertEquals(31+28, SubDate.getMonthDay(3, false));
         assertEquals(31+29, SubDate.getMonthDay(3, true));
     }
+
+    public void testGetTotalDay() {
+        assertEquals(1, SubDate.getTotalDay(00010101));
+        assertEquals(366, SubDate.getTotalDay(00020101));
+    }
 }

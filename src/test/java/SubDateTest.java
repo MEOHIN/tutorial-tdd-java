@@ -11,5 +11,8 @@ class SubDateTest extends TestCase {
         assertEquals(0,SubDate.getYearDay(1));
         // 2년까지의 총 일수는 1년 1월 1일부터 2년 1월 1일까지다. 따라서 365일이다.
         assertEquals(365,SubDate.getYearDay(2));
+        /* 실패하는 코드다.
+        * 5년 미만의 총 일수를 구한다.*/
+        assertEquals(365+365+365+366, SubDate.getYearDay(5));
     }
 }

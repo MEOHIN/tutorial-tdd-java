@@ -15,8 +15,16 @@ public class SubDate {
         return false;
     }
 
+    static final int[] monthDays = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
     public static int getMonthDay(int month, boolean isLeap) {
-        if (month == 1) return 0;
-        else return 31;
+        int result = 0;
+        for (int i = 1; i < month; i++) {
+            result += monthDays[i-1];
+        }
+
+        if (isLeap && month > 2) {
+            result += 1;
+        }
+        return result;
     }
 }

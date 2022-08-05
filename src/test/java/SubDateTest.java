@@ -14,7 +14,7 @@ class SubDateTest extends TestCase {
         assertEquals(365,SubDate.getYearDay(2));
         /* 실패하는 코드다.
         * 5년 미만의 총 일수를 구한다.*/
-//        assertEquals(365+365+365+366, SubDate.getYearDay(5));
+        assertEquals(365+365+365+366, SubDate.getYearDay(5));
     }
 
     public void testLeapYear() {

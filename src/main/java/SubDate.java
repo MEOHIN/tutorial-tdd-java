@@ -5,9 +5,6 @@ public class SubDate {
     }
 
     public static boolean isLeapYear(int year) {
-        if (year == 0) return true;
-        if (year == 1) return false;
-        if (year == 4) return true;
-        return false;
+        return year % 4 == 0;
     }
 }

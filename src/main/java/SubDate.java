@@ -35,4 +35,8 @@ public class SubDate {
 
         return getYearDay(year) + getMonthDay(month, isLeapYear(year)) + day;
     }
+
+    public static int sub(String date1, String date2) {
+        return Math.abs(getTotalDay(date1) - getTotalDay(date2));
+    }
 }

@@ -1,7 +1,11 @@
 public class SubDate {
     public static int getYearDay(int year) {
-        if (year==1 ) return 0;
-        else return 365;
+        int result = 0;
+        for (int i = 1; i < year; i++) {
+            if (isLeapYear(i)) result += 366;
+            else result += 365;
+        }
+        return result;
     }
 
     public static boolean isLeapYear(int year) {

@@ -15,7 +15,7 @@ public class SubDate {
         return false;
     }
 
-    public static int getMonthDay(int month) {
+    public static int getMonthDay(int month, boolean isLeap) {
         if (month == 1) return 0;
         else return 31;
     }
